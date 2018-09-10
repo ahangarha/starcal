@@ -106,7 +106,7 @@ def compileTmFormat(format, hasTime=True):
 			continue
 		elif c1 == "Q":## calendar name (gregorian, jalali, ...)
 			funcs.append(lambda cell, mode, tm: _(
-				calTypes[mode].name,
+				calTypes.nameByIndex(mode),
 			))
 			pyFmt += "%s"
 			i += 2
